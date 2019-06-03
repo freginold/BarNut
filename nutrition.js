@@ -5,7 +5,7 @@ var terms = [],
     gI = "<span id='goodFood'>&#9745;</span>",    // good food icon
     bI = "<span id='badFood'>&#9746;</span>",    // bad food icon
     data = [
-        "almond butter", bI, "Avoid - smore fat than protein",
+        "almond butter", bI, "Avoid - more fat than protein",
         "asparagus", gI, "Non-starchy vegetable",
         "artichoke", gI, "Non-starchy vegetable",
         "bacon", bI, "Avoid - high in fat, more fat than protein",
