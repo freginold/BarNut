@@ -127,5 +127,9 @@ function setAutocomplete() {
 $(document).ready(function() {
     getData();
     setAutocomplete();
+    $( "#tabs" ).tabs({
+        active: 0,
+        height: "fill"
+    });
 
 });

@@ -3,18 +3,19 @@
 #inputForm {
     top: 3%;
     left: 10px;
-    position: absolute;
+    position: relative;
     font-size: 1.2em;
     font-family: "Arial", sans-serif;
 }
 
 #inputBox {
-    font-size: 1.4em;
-    border-radius: 10px;
+    font-size: 1.1em;
+    border-radius: 8px;
+    padding: 4px;
 }
 
 #submitBtn {
-    font-size: 1.4em;
+    font-size: 1.2em;
     border-radius: 4px;
 }
 
@@ -24,7 +25,7 @@
     width: 55%;
     left: 10px;
     top: 25%;
-    position: absolute;
+    position: relative;
     display: inline-block;
     padding: 10px;
     font-family: "Arial", sans-serif;

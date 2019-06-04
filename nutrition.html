@@ -16,14 +16,34 @@
 </head>
 
 <body>
-    <form name='inputForm' id='inputForm' onsubmit='onSubmitted(inputBox.value);' action='#'>
-        <p>Look up:</p>
-        <input id='inputBox' autofocus='autofocus' placeholder='Search'>
-        <button id='submitBtn' type="submit">OK</button>
-    </form>
 
-    <div id='infoDiv'>
-    </div>
+    <div id="tabs">
+        <ul>
+          <li><a href="#tabs-1">Search</a></li>
+          <li><a href="#tabs-2">Protein</a></li>
+          <li><a href="#tabs-3">Exercise</a></li>
+          <li><a href="#tabs-4">Water</a></li>
+        </ul>
+        <div id="tabs-1">
+            <p>Look up a food or drink:</p>
+            <form name='inputForm' id='inputForm' onsubmit='onSubmitted(inputBox.value);' action='#'>
+                <input id='inputBox' autofocus='autofocus' placeholder='Search...'>
+                <button id='submitBtn' type="submit">OK</button>
+            </form>
+            <div id='infoDiv'>
+            </div>
+        </div>
+        <div id="tabs-2">
+            <p>protein info here</p>
+        </div>
+        <div id="tabs-3">
+            <p>exercise info here</p>
+        </div>
+        <div id="tabs-4">
+            <p>water/hydration info here</p>
+        </div>
+      </div>
+
 
 </body>
 </html>
