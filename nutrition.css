@@ -2,11 +2,12 @@
 
 thead {
     font-weight: 700;
+    font-size: 1.3em;
     text-decoration: underline;
 }
 
 th {
-    padding: 2px;
+    padding: 2px 2px 10px 2px;
 }
 
 .badText {
@@ -17,18 +18,32 @@ th {
     color: green;
 }
 
+.starchTable {
+    margin: 8px;
+    padding: 8px;
+    display: inline-block;
+}
+
+.starchTable th, #starchTable td {
+    column-width: 12em;
+    text-align: left;
+    padding-right: 8em;
+}
+
+.starchTableBody {
+    display: block;
+    max-height: 20em;
+    overflow-y: scroll;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+}
+
 #header {
     font-size: 3.2em;
     text-align: center;
     font-family: "Candara", "Arial", sans-serif;
-    color: #440044;
+    color: #434343;
     padding: 0.4em;
-}
-
-#starchTable th, #starchTable td {
-    column-width: 12em;
-    text-align: left;
-    padding-right: 8em;
 }
 
 #inputForm {
@@ -42,7 +57,8 @@ th {
 #inputBox {
     font-size: 1.1em;
     border-radius: 8px;
-    padding: 4px;
+    padding: 8px;
+    width: 20em;
 }
 
 #submitBtn {
@@ -51,7 +67,6 @@ th {
 }
 
 #infoDiv {
-    border: 1px solid lightgray;
     height: 65%;
     width: 55%;
     left: 10px;
@@ -59,20 +74,26 @@ th {
     position: relative;
     display: inline-block;
     padding: 10px;
+    margin: 10px;
     font-family: "Arial", sans-serif;
     font-size: 1.2em;
 }
 
 #goodFood {
     color: green;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 700;
     margin-right: 1em;
 }
 
 #badFood {
     color: red;
-    font-size: 1.5em;
+    font-size: 1.8em;
     font-weight: 700;
     margin-right: 1em;
+}
+
+#termHeader {
+    font-weight: 700;
+    font-size: 1.4em;
 }

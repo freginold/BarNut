@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Beth's Nutrition Page</title>
+    <title>Bariatric Nutrition Info</title>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
         <!-- jQuery 1.12.4 -->
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
@@ -19,7 +19,7 @@
 <body>
 
     <div id="header" class="ui-widget-header">
-        Bariatric Nutrition Page
+        Bariatric Nutrition Info
     </div>
     <div id="tabs">
         <ul>
@@ -36,21 +36,28 @@
                 <button id='submitBtn' type="submit">OK</button>
             </form>
             <div id='infoDiv'>
+                <span id="termHeader"></span>
+                <ul id="descriptionList"></ul>
             </div>
         </div>
         <div id="tabs-2">
             <p>protein info here</p>
         </div>
         <div id="tabs-3">
-            <p>starches and non-starches here</p>
-            <table id="starchTable">
+            <table class="starchTable">
                 <thead>
-                    <tr><th class="goodText">Non-Starchy Vegetables</th><th class="badText">Starches</th></tr>
+                    <tr><th class="goodText">Non-Starchy Vegetables</th></tr>
                 </thead>
-                <tbody>
-                    <tr><td>Non</td><td>Starch</td></tr>
+                <tbody id="nonStarchTableBody" class="starchTableBody">
                 </tbody>
             </table>
+            <table class="starchTable">
+                <thead>
+                    <tr><th class="badText">Starches</th></tr>
+                </thead>
+                <tbody id="starchTableBody" class="starchTableBody">
+                </tbody>
+            </table>    
         </div>
         <div id="tabs-4">
             <p>exercise info here</p>
