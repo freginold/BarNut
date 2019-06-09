@@ -17,6 +17,7 @@ var terms = [],
     highFatTxt = "High in fat",
     highSugarTxt = "High in sugar",
 
+    // foods/drinks to search through
     data = [
     "almond butter", bI, [moreFatTxt],
     "asparagus", gI, [nonStarchTxt],
@@ -101,4 +102,36 @@ var terms = [],
     "wrap", bI, [starchTxt],
     "yogurt (low fat)", gI, [leanProteinTxt],
     "zucchini", gI, [nonStarchTxt],
-];
+],
+
+// exercise guidance -- 1st line is title
+    exerciseData = [
+        [
+            "Exercise Guidance / Advice",
+            "Start slowly (even just 1-2 minutes). Progress to 30 minutes at least 5 days per week.",
+            "Exercise should be approved by your physician and included in your daily routine.",
+            "Weight lifting can help rebuild some of the muscle normally lost with large weight loss."
+        ],
+        [
+            "Recommended Activities",
+            "Walking -- outside, in a mall, on a treadmill",
+            "Recumbent bike",
+            "Water aerobics",
+            "Swimming",
+            "Weight lifting",
+            "Dancing"
+        ],
+        [
+            "Benefits of Exercise",
+            "Decreases your risk of chronic disease",
+            "Gives you more energy",
+            "Helps you sleep better",
+            "Improves your self-esteem"
+        ],
+        [
+            "Supplemental Activities",
+            "Park farther away in the parking lot",
+            "March in place during TV commercials",
+            "Take a flight of stairs instead of the elevator"
+        ]
+    ];

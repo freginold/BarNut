@@ -1,5 +1,11 @@
 /* nutrition CSS file */
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
 thead {
     font-weight: 700;
     font-size: 1.3em;
@@ -36,6 +42,24 @@ th {
     overflow-y: scroll;
     border: 1px solid lightgray;
     border-radius: 4px;
+}
+
+.exDiv {
+    display: inline-block;
+    padding: 2px;
+    margin: 0.5em 6em 1em 0.2em;
+    width: 25%;
+    border: 1px solid lightgray;
+    border-radius: 4px;
+    vertical-align: top;
+}
+
+.exDiv h3 {
+    padding-left: 1em;
+}
+
+.exDiv li {
+    padding: 2px 2px 4px 2px;
 }
 
 #header {

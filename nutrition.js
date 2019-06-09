@@ -20,7 +20,7 @@ function onSubmitted(val) {
 }
 
 function getData() {
-    // configure data as objects
+    // configure data list as objects
     var c = 0;
     for (var i = 0; i < data.length; i = i + 3) {
         terms[c] = {
@@ -44,12 +44,23 @@ function getData() {
         c++;
     }
     fillStarchTables();
+    fillExerciseLists();
 }
 
 function setAutocomplete() {
+    // set up jQuery UI autocomplete for search bar
     $("#inputBox").autocomplete({
         source: termNames
       });
+}
+
+function setTabs() {
+    // set up jQuery UI tabs
+    $( "#tabs" ).tabs({
+        active: 0,
+        height: "fill",
+        disabled: [1, 4]  // temporary
+    });
 }
 
 function fillStarchTables() {
@@ -66,15 +77,26 @@ function fillStarchTables() {
     $("#nonStarchTableBody").html(starchTemp);
 }
 
+function fillExerciseLists() {
+    // populate exercise tab
+    var head,
+        exHTML = "";
+    for (var i = 0; i < exerciseData.length; i++) {
+        head = exerciseData[i][0];
+        exHTML = exHTML + "<div class='exDiv'><h3>" + head + "</h3><ul>";
+        for (var j = 1; j < exerciseData[i].length; j++) {
+            exHTML = exHTML + "<li>" + exerciseData[i][j] + "</li>";
+        }
+        exHTML = exHTML + "</ul></div>";
+    }
+    $("#tabs-4").html(exHTML);
+}
+
 
 // ----------- start -----------
 
 $(document).ready(function() {
     getData();
     setAutocomplete();
-    $( "#tabs" ).tabs({
-        active: 0,
-        height: "fill",
-        disabled: [1, 3, 4]  // temporary
-    });
+    setTabs();
 });
