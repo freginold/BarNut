@@ -1,5 +1,5 @@
 # NutritionInfo
-Web page used for displaying bariatric nutritional information.
+Web page to display bariatric nutritional information.
 
 https://freginold.github.io/NutritionInfo/nutrition.html
 
