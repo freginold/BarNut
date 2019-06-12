@@ -9,11 +9,16 @@ html, body {
 thead {
     font-weight: 700;
     font-size: 1.3em;
-    text-decoration: underline;
 }
 
 th {
     padding: 2px 2px 10px 2px;
+}
+
+footer {
+    font-family: "Candara", "Calibri", sans-serif;
+    text-align: center;
+    padding: 2px;
 }
 
 .badText {
@@ -120,4 +125,8 @@ th {
 #termHeader {
     font-weight: 700;
     font-size: 1.4em;
+}
+
+#tabs > ul > li {
+    font-size: 1.3em;
 }
