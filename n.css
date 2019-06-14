@@ -53,10 +53,12 @@ footer {
     display: inline-block;
     padding: 2px;
     margin: 0.5em 6em 1em 0.2em;
-    width: 25%;
+    width: 20em;
     border: 1px solid lightgray;
     border-radius: 4px;
     vertical-align: top;
+    overflow: visible;
+    overflow-wrap:  break-word;
 }
 
 .exDiv h3 {
@@ -91,7 +93,8 @@ footer {
 }
 
 #submitBtn {
-    font-size: 1.2em;
+    font-size: 1.7em;
+    vertical-align: bottom;
     border-radius: 4px;
 }
 
@@ -129,4 +132,8 @@ footer {
 
 #tabs > ul > li {
     font-size: 1.3em;
+}
+
+#tabs-1 > p {
+    font-family: "Arial", sans-serif;
 }
