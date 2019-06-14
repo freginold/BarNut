@@ -45,6 +45,8 @@ function getData() {
     }
     fillStarchTables();
     fillExerciseLists();
+    fillFruitLists();
+    fillLinkLists();
 }
 
 function setAutocomplete() {
@@ -90,6 +92,36 @@ function fillExerciseLists() {
         exHTML = exHTML + "</ul></div>";
     }
     $("#tabs-4").html(exHTML);
+}
+
+function fillFruitLists() {
+    // populate fruit tab
+    var head,
+        tempHTML = "";
+    for (var i = 0; i < fruitData.length; i++) {
+        head = fruitData[i][0];
+        tempHTML = tempHTML + "<div class='exDiv'><h3>" + head + "</h3><ul>";
+        for (var j = 1; j < fruitData[i].length; j++) {
+            tempHTML = tempHTML + "<li>" + fruitData[i][j] + "</li>";
+        }
+        tempHTML = tempHTML + "</ul></div>";
+    }
+    $("#tabs-6").html(tempHTML);
+}
+
+function fillLinkLists() {
+    // populate fruit tab
+    var head,
+        tempHTML = "";
+    for (var i = 0; i < linkData.length; i++) {
+        head = linkData[i][0];
+        tempHTML = tempHTML + "<div class='exDiv'><h3>" + head + "</h3><ul>";
+        for (var j = 1; j < linkData[i].length; j = j + 2) {
+            tempHTML = tempHTML + "<li><a href='" + linkData[i][j + 1] + "' target='_new'>" + linkData[i][j] + "</a></li>";
+        }
+        tempHTML = tempHTML + "</ul></div>";
+    }
+    $("#tabs-7").html(tempHTML);
 }
 
 

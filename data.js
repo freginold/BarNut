@@ -135,3 +135,46 @@ var terms = [],
             "Take a flight of stairs instead of the elevator"
         ]
     ];
+
+// fruit guidance -- 1st line is title
+fruitData = [
+    [
+        "Fruit Servings",
+        "Have up to 3 servings per day",
+        "1 serving = 1 cup or a small piece of fruit",
+    ],
+    [
+        "Fruit Guidance",
+        "Pair fruit with a protein for a snack to prevent blood sugar spikes."
+    ],
+    [
+        "Possible Fruit Intolerances",
+        "Fruit with tough skin",
+        "Dried fruit",
+        "Hard fruit",
+        "Citrus fruit"
+    ]
+];
+
+// external links -- 1st line is title
+linkData = [
+    [
+        "GBMC Sites",
+        "GBMC - Bariatric Surgery & COMP","https://www.gbmc.org/weightloss",
+        "B4 Fitness & Lifestyle Coaching", "https://www.b4fitlife.com/",
+        "Facebook - GBMC COMP","https://www.facebook.com/GBMCWeightLoss",
+        "Facebook - B4 Fitness & Lifestyle Coaching","https://www.facebook.com/b4fitlife",
+        "Pinterest - GBMC HealthCare","https://www.pinterest.com/gbmchealthcare/",
+        "Instagram - GBMC HealthCare","https://www.instagram.com/gbmchealthcare/"
+    ],
+    [
+        "Recipe Sites",
+        "Bariatric Foodie","https://www.bariatricfoodie.com/",
+        "BariatricEating.com","https://www.bariatriceating.com/",
+        "My Bariatric Life","http://www.mybariatriclife.org/",
+        "Karen Mangum Nutrition - Bariatric Friendly Main Dishes","https://karenmangum.com/category/bariatric-friendly-main-dishes/",
+        "Skinny Taste","https://www.skinnytaste.com/",
+        "Facebook - Bariatric Recipes for Me","https://www.facebook.com/bariatricrecipesforme",
+        "Pinterest - Bariatric Recipes", "https://www.pinterest.com/explore/bariatric-recipes/"
+    ]
+];
