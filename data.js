@@ -44,6 +44,7 @@ var terms = [],
     "cooking oil", bI, [highFatTxt],
     "corn", bI, [starchTxt],
     "cottage cheese (low fat)", gI, [leanProteinTxt],
+    "crackers", bI, [starchTxt],
     "creamy dressing", bI, [highFatTxt],
     "creamy sauce", bI, [highFatTxt],
     "creamy soup", bI, [highFatTxt],
@@ -52,6 +53,7 @@ var terms = [],
     "egg (raw)", gI, [leanProteinTxt],
     "egg (hard-boiled)", gI, [leanProteinTxt],
     "fish", gI, [leanProteinTxt],
+    "flour", bI, [starchTxt],
     "fried food", bI, [highFatTxt],
     "frozen yogurt", bI, [highSugarTxt],
     "fruit juice", bI, [highSugarTxt],
@@ -83,6 +85,7 @@ var terms = [],
     "protein powder", gI, [leanProteinTxt],
     "radish", gI, [nonStarchTxt],
     "rice", bI, [starchTxt],
+    "rice cake", bI, [starchTxt],
     "salami", bI, [highFatTxt, moreFatTxt],
     "sausage", bI, [highFatTxt, moreFatTxt],
     "seed", bI, [highFatTxt],
@@ -101,7 +104,7 @@ var terms = [],
     "turnip", gI, [nonStarchTxt],
     "wrap", bI, [starchTxt],
     "yogurt (low fat)", gI, [leanProteinTxt],
-    "zucchini", gI, [nonStarchTxt],
+    "zucchini", gI, [nonStarchTxt]
 ],
 
 // exercise guidance -- 1st line is title
@@ -136,16 +139,36 @@ var terms = [],
         ]
     ];
 
+// fluids guidance -- 1st line is title
+fluidsData = [
+    [
+        "Fluids Guidance",
+        "Drink at least 64 ounces every day.",
+        "Don't drink with a meal or for 30 minutes after.",
+        "Take your water bottle everywhere."
+    ],
+    [
+        "Fluids to Avoid",
+        "Decaf coffee - 3 weeks",
+        "Caffeine - 1 month",
+        "Alcohol (all types) - 1 year",
+        "Carbonated drinks - forever",
+        "Drinks with sugar (even juice) - forever"
+    ]
+];
+
 // fruit guidance -- 1st line is title
 fruitData = [
     [
         "Fruit Servings",
         "Have up to 3 servings per day",
         "1 serving = 1 cup or a small piece of fruit",
+        "For fruit smoothies, limit fruit to 1/2 cup"
     ],
     [
         "Fruit Guidance",
-        "Pair fruit with a protein for a snack to prevent blood sugar spikes."
+        "Pair fruit with a protein for a snack to prevent blood sugar spikes.",
+        "Eat fruit after protein and non-starch vegetables, if still hungry."
     ],
     [
         "Possible Fruit Intolerances",

@@ -45,6 +45,7 @@ function getData() {
     }
     fillStarchTables();
     fillExerciseLists();
+    fillFluidsLists();
     fillFruitLists();
     fillLinkLists();
 }
@@ -61,7 +62,7 @@ function setTabs() {
     $( "#tabs" ).tabs({
         active: 0,
         height: "fill",
-        disabled: [1, 4]  // temporary
+        disabled: [1]  // temporary
     });
 }
 
@@ -92,6 +93,21 @@ function fillExerciseLists() {
         exHTML = exHTML + "</ul></div>";
     }
     $("#tabs-4").html(exHTML);
+}
+
+function fillFluidsLists() {
+    // populate fluids tab
+    var head,
+        tempHTML = "";
+    for (var i = 0; i < fluidsData.length; i++) {
+        head = fluidsData[i][0];
+        tempHTML = tempHTML + "<div class='exDiv'><h3>" + head + "</h3><ul>";
+        for (var j = 1; j < fluidsData[i].length; j++) {
+            tempHTML = tempHTML + "<li>" + fluidsData[i][j] + "</li>";
+        }
+        tempHTML = tempHTML + "</ul></div>";
+    }
+    $("#tabs-5").html(tempHTML);
 }
 
 function fillFruitLists() {
