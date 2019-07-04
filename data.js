@@ -13,6 +13,7 @@ var terms = [],
     leanProteinTxt = "Lean protein",
     ifUnswTxt = "If unsweetened",
     sugFreeTxt = "Sugar free",
+    zeroCalTxt = "0 calories",
 
     // neutral msgs
     isolateTxt = 'Look for "isolate" as the first ingredient',
@@ -24,6 +25,7 @@ var terms = [],
     moreFatTxt = "More fat than protein",
     highFatTxt = "High in fat",
     highSugarTxt = "High in sugar",
+    notSugarFreeTxt = "Not sugar free",
 
     // foods/drinks to search through
     data = [
@@ -146,7 +148,7 @@ var terms = [],
     "shellfish", gI, [leanProteinTxt],
     "snap pea", gI, [nonStarchTxt],
     "snow pea", gI, [nonStarchTxt],
-    "Sobe Lifewater", gI, [],
+    "Sobe Lifewater", gI, [zeroCalTxt],
     "soda", bI, [highSugarTxt],
     "soy milk", gI, [ifUnswTxt],
     "spaghetti squash", gI, [nonStarchTxt],
@@ -169,6 +171,7 @@ var terms = [],
     "True Lemon powder drink mix", gI, [sugFreeTxt],
     "turkey", gI, [leanProteinTxt],
     "turnip", gI, [nonStarchTxt],
+    "V8 Light", bI, [notSugarFreeTxt],
     "Vitamin Water Zero", gI, [],
     "wax bean", gI, [nonStarchTxt],
     "winter squash (butternut, acorn, etc.)", gI, [nonStarchTxt],
@@ -213,17 +216,19 @@ var terms = [],
 fluidsData = [
     [
         "Fluids Guidance",
-        "Drink at least 64 ounces every day.",
+        "Drink at least 64 ounces every day (sugar free and carbonation free only).",
+        "Sip constantly throughout the day at a rate of 4 to 8 ounces per hour.",
+        "Don't try to guzzle or chug water after surgery.",
         "Don't drink with a meal or for 30 minutes after.",
         "Take your water bottle everywhere."
     ],
     [
         "Fluids to Avoid",
-        "Decaf coffee - 3 weeks",
-        "Caffeine - 1 month",
-        "Alcohol (all types) - 1 year",
-        "Carbonated drinks - forever",
-        "Drinks with sugar (even juice) - forever"
+        "Decaf coffee -- 3 weeks",
+        "Caffeine -- 1 month",
+        "Alcohol (all types) -- 1 year",
+        "Carbonated drinks -- forever",
+        "Drinks with sugar (even juice) -- forever"
     ]
 ];
 
