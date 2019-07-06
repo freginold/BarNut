@@ -2,7 +2,6 @@
 
 function onSubmitted(val) {
     // take input from inputBox
-    console.log(data.length + " " + terms.length + " " + terms[1]);
     var descripList;
     for (var i = 0; i < terms.length; i++) {
         if (terms[i].term == val) {
@@ -12,7 +11,7 @@ function onSubmitted(val) {
             for (var j = 0; j < terms[i].description.length; j++) {
                 // get strings in description & display them in list format
                 descripList = descripList + "<li>" + terms[i].description[j] + "</li>";
-            }    
+            }
             $("#termHeader").html(terms[i].icon + " " + terms[i].term);
             $("#descriptionList").html(descripList);
         }
@@ -43,6 +42,7 @@ function getData() {
         termNames[c] = data[i];
         c++;
     }
+    fillProteinLists();
     fillStarchTables();
     fillExerciseLists();
     fillFluidsLists();
@@ -61,8 +61,7 @@ function setTabs() {
     // set up jQuery UI tabs
     $( "#tabs" ).tabs({
         active: 0,
-        height: "fill",
-        disabled: [1]  // temporary
+        height: "fill"
     });
 }
 
@@ -78,6 +77,21 @@ function fillStarchTables() {
         starchTemp = starchTemp + "<tr><td>" + nonStarches[j] + "</td></tr>";
     }
     $("#nonStarchTableBody").html(starchTemp);
+}
+
+function fillProteinLists() {
+    // populate protein tab
+    var head,
+        exHTML = "";
+    for (var i = 0; i < proteinData.length; i++) {
+        head = proteinData[i][0];
+        exHTML = exHTML + "<div class='exDiv'><h3>" + head + "</h3><ul>";
+        for (var j = 1; j < proteinData[i].length; j++) {
+            exHTML = exHTML + "<li>" + proteinData[i][j] + "</li>";
+        }
+        exHTML = exHTML + "</ul></div>";
+    }
+    $("#tabs-2").html(exHTML);
 }
 
 function fillExerciseLists() {

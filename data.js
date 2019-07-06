@@ -5,20 +5,23 @@ var terms = [],
     starches = [],
     nonStarches = [],
     gI = "<span class='goodFood'>&#10004;</span>",    // good food icon
-    bI = "<span class='badFood'>&#10060;</span>";    // bad food icon
-    nI = "<span class='neutralFood'>&#9432;</span>";    // neutral food icon
+    bI = "<span class='badFood'>&#10060;</span>",    // bad food icon
+    nI = "<span class='neutralFood'>&#9432;</span>",    // neutral food icon
 
     // good msgs
     nonStarchTxt = "Non-starchy vegetable",
     leanProteinTxt = "Lean protein",
-    ifUnswTxt = "If unsweetened",
     sugFreeTxt = "Sugar free",
     zeroCalTxt = "0 calories",
 
     // neutral msgs
+    ifUnswTxt = "If unsweetened",
+    ifSugarFreeTxt = "If sugar free",
     isolateTxt = 'Look for "isolate" as the first ingredient',
     sugar15gTxt = "Look for 15g of sugar or less",
+    sugar5gTxt = "Look for < 5g of sugar",
     protein15gTxt = "Look for > 15g of protein",
+    portionSizeTxt = "Watch the portion size",
 
     // bad msgs
     starchTxt = "Starch",
@@ -37,9 +40,11 @@ var terms = [],
     "artichoke", gI, [nonStarchTxt],
     "arugula", gI, [nonStarchTxt],
     "asparagus", gI, [nonStarchTxt],
+    "Atkins frozen meals", gI, [],
     "bacon", bI, [highFatTxt, moreFatTxt],
     "Bai waters", gI, [],
     "bean (not incl. string/green bean)", bI, [starchTxt],
+    "beef jerky", gI, [sugar5gTxt],
     "bok choy", gI, [nonStarchTxt],
     "bologna", bI, [highFatTxt, moreFatTxt],
     "bread", bI, [starchTxt],
@@ -59,6 +64,8 @@ var terms = [],
     "cereal (hot & cold)", bI, [starchTxt],
     "cheese (reduced fat)", gI, [leanProteinTxt],
     "chicken", gI, [leanProteinTxt],
+    "chicken salad (deli)", gI, [portionSizeTxt],
+    "chicken salad (homemade)", gI, [],
     "coffee", gI, ["OK after 1 month", "Does not count toward fluid goals"],
     "coffee (decaf)", gI, ["OK after 3 weeks"],
     "collard greens", gI, [nonStarchTxt],
@@ -82,7 +89,7 @@ var terms = [],
     "escarole", gI, [nonStarchTxt],
     "fennel", gI, [nonStarchTxt],
     "fish", gI, [leanProteinTxt],
-    "flavored water", gI, ["If no sugar"],
+    "flavored water", gI, [ifSugarFreeTxt],
     "flour", bI, [starchTxt],
     "fried food", bI, [highFatTxt],
     "frozen yogurt", bI, [highSugarTxt],
@@ -101,6 +108,7 @@ var terms = [],
     "heart of palm", gI, [nonStarchTxt],
     "hot dog", bI, [highFatTxt, moreFatTxt],
     "ice cream", bI, [highSugarTxt],
+    "Jello", gI, [ifSugarFreeTxt],
     "jicama", gI, [nonStarchTxt],
     "kale", gI, [nonStarchTxt],
     "leek", gI, [nonStarchTxt],
@@ -169,6 +177,8 @@ var terms = [],
     "tomato (fresh, canned)", gI, [nonStarchTxt],
     "tortilla (incl. low-carb tortilla)", bI, [starchTxt],
     "True Lemon powder drink mix", gI, [sugFreeTxt],
+    "tuna salad (deli)", gI, [portionSizeTxt],
+    "tuna salad (homemade)", gI, [],
     "turkey", gI, [leanProteinTxt],
     "turnip", gI, [nonStarchTxt],
     "V8 Light", bI, [notSugarFreeTxt],
@@ -180,13 +190,29 @@ var terms = [],
     "zucchini noodles", gI, [nonStarchTxt]
 ],
 
+// protein guidance -- 1st line is title
+    proteinData = [
+        [
+            "Protein Goal",
+            "70 to 100 grams per day"
+        ],
+        [
+            "Protein Guidance / Advice",
+            "Eat protein first.",
+            "Don't exceed 100g of protein per day; unabsorbed protein may be stored as fat."
+        ]
+    ],
+
 // exercise guidance -- 1st line is title
     exerciseData = [
         [
             "Exercise Guidance / Advice",
             "Start slowly (even just 1-2 minutes). Progress to 30 minutes at least 5 days per week.",
             "Exercise should be approved by your physician and included in your daily routine.",
-            "Weight lifting can help rebuild some of the muscle normally lost with large weight loss."
+            "Weight lifting can help rebuild some of the muscle normally lost with large weight loss.",
+            "Don't eat right before a workout.",
+            "Eat within 15 minutes after an intense workout (or 30-45 minutes after a walk or light jog).",
+            "Your post-recovery snack should include a form of carbohydrate, some protein and plenty of fluid."
         ],
         [
             "Recommended Activities",
@@ -209,8 +235,24 @@ var terms = [],
             "Park farther away in the parking lot",
             "March in place during TV commercials",
             "Take a flight of stairs instead of the elevator"
+        ],
+        [
+            "Pre-Workout Fuel Suggestions",
+            "PB2 and a banana",
+            "Low fat/no fat Greek yogurt with berries",
+            "Low fat milk and fruit",
+            "Apple and low fat cheese",
+            "Low fat cottage cheese and sliced pineapple"
+        ],
+        [
+            "Post-Workout Fuel Suggestions",
+            "Post-workout recovery smoothie (or post-workout smoothie made with low fat milk and fruit)",
+            "Low fat, low sugar chocolate milk",
+            "Turkey with cut veggies (like carrots)",
+            "Yogurt with berries",
+            "1/2 protein bar and a fruit"
         ]
-    ];
+    ],
 
 // fluids guidance -- 1st line is title
 fluidsData = [
@@ -230,7 +272,7 @@ fluidsData = [
         "Carbonated drinks -- forever",
         "Drinks with sugar (even juice) -- forever"
     ]
-];
+],
 
 // fruit guidance -- 1st line is title
 fruitData = [
@@ -252,7 +294,7 @@ fruitData = [
         "Hard fruit",
         "Citrus fruit"
     ]
-];
+],
 
 // external links -- 1st line is title
 linkData = [
