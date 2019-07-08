@@ -9,6 +9,7 @@ var terms = [],
     nI = "<span class='neutralFood'>&#9432;</span>",    // neutral food icon
 
     // good msgs
+    clearLiquidTxt = "OK for Clear Liquids stage",
     nonStarchTxt = "Non-starchy vegetable",
     leanProteinTxt = "Lean protein",
     lowCarbTxt = "Low carb",
@@ -49,6 +50,7 @@ var terms = [],
     "arugula", gI, [nonStarchTxt],
     "asparagus", gI, [nonStarchTxt],
     "Atkins frozen meals", gI, [],
+    "Atkins Lift", gI, [clearLiquidTxt],
     "Atkinson’s Sugar Free Chick-o-Stick Candy", gI, [lowCarbTxt],
     "bacon", bI, [highFatTxt, moreFatTxt],
     "Bacon Heir Pork Panko Breadcrumbs", gI, [lowCarbTxt],
@@ -63,6 +65,7 @@ var terms = [],
     "breaded food", bI, [highFatTxt],
     "broccoli", gI, [nonStarchTxt],
     "broccoli rabe", gI, [nonStarchTxt],
+    "broth", gI, [clearLiquidTxt],
     "brussels sprout", gI, [nonStarchTxt],
     "butter", bI, [highFatTxt],
     "cabbage (green, red, napa, savoy)", gI, [nonStarchTxt],
@@ -131,6 +134,7 @@ var terms = [],
     "full-fat dairy products", bI, [moreFatTxt],
     "garlic", gI, [nonStarchTxt],
     "Gatorade", bI, ["There are no sugar-free Gatorade products"],
+    "gelatin, sugar free", gI, [clearLiquidTxt],
     "grains", bI, [starchTxt],
     "granola", bI, [starchTxt],
     "grease", bI, [highFatTxt],
@@ -147,6 +151,7 @@ var terms = [],
     "ice cream", bI, [highSugarTxt],
     "Impastable", gI, [lowCarbTxt],
     "Inspire pancake mix", gI, [lowCarbTxt],
+    "Isopure", gI, [clearLiquidTxt],
     "Jello", gI, [ifSugarFreeTxt],
     "jicama", gI, [nonStarchTxt],
     "Jolly Ranchers (sugar free)", gI, [lowCarbTxt],
@@ -200,6 +205,7 @@ var terms = [],
     "Pie 5", gI, [lowCarbTxt],
     "pimiento", gI, [nonStarchTxt],
     "popcorn", bI, [starchTxt],
+    "popsicle, sugar free", gI, [clearLiquidTxt],
     "potato", bI, [starchTxt],
     "Power Crunch Protein Energy Bar", gI, [],
     "Powerade Zero", gI, [],
@@ -240,7 +246,7 @@ var terms = [],
     "shrimp, frozen", gI, [],
     "Six Star Whey Protein Shake", gI, [],
     "Skinny Pasta Konjac Pasta (Couscous, Fettuccine, Lasagna, Noodles, Rice and Spaghetti)", gI, [lowCarbTxt],
-    "Smart Baking Co cakes", gI, [lowCarbTxt],
+    "Smart Baking Company Cakes", gI, [lowCarbTxt],
     "snap pea", gI, [nonStarchTxt],
     "snow pea", gI, [nonStarchTxt],
     "Sobe Lifewater", gI, [zeroCalTxt],
@@ -254,6 +260,7 @@ var terms = [],
     "squash", gI, [nonStarchTxt],
     "store brand powder drink mix", gI, [sugFreeTxt],
     "string bean", gI, [nonStarchTxt],
+    "sugar free drinks", gI, [clearLiquidTxt],
     "summer squash (yellow, zucchini)", gI, [nonStarchTxt],
     "sweet potato", bI, [starchTxt],
     "sweet tea", bI, [highSugarTxt],
@@ -281,6 +288,7 @@ var terms = [],
     "Unjury Ready to Drink Shake", gI, [],
     "V8 Light", bI, [notSugarFreeTxt],
     "Vitamin Water Zero", gI, [],
+    "water", gI, [clearLiquidTxt],
     "wax bean", gI, [nonStarchTxt],
     "Werther's (sugar free)", gI, [lowCarbTxt],
     "winter squash (butternut, acorn, etc.)", gI, [nonStarchTxt],
@@ -316,13 +324,15 @@ var terms = [],
 // exercise guidance -- 1st line is title
     exerciseData = [
         [
-            "Exercise Guidance / Advice",
+            "Exercise Goals",
             "Start slowly (even just 1-2 minutes). Progress to 30 minutes at least 5 days per week.",
+            "Aim for 150 minutes of moderate aerobic activity — or 75 minutes of vigorous aerobic activity — per week.",
+            "To lose weight (or maintain weight loss) aim for 300 minutes or more per week, or 1 hour 5 days per week.",
+        ],
+        [
+            "Exercise Guidance / Advice",
             "Exercise should be approved by your physician and included in your daily routine.",
             "Weight lifting can help rebuild some of the muscle normally lost with large weight loss.",
-            "Don't eat right before a workout.",
-            "Eat within 15 minutes after an intense workout (or 30-45 minutes after a walk or light jog).",
-            "A post-recovery snack should include a form of carbohydrate, some protein and plenty of fluid."
         ],
         [
             "Recommended Activities",
@@ -342,9 +352,16 @@ var terms = [],
         ],
         [
             "Supplemental Activities",
-            "Park farther away in the parking lot",
-            "March in place during TV commercials",
-            "Take a flight of stairs instead of the elevator"
+            "Park farther away in the parking lot.",
+            "March in place during TV commercials.",
+            "Take a flight of stairs instead of the elevator.",
+            "Stand every 30 minutes to reduce health risks and improve longevity."
+        ],
+        [
+            "Exercise & Eating",
+            "Don't eat right before a workout.",
+            "Eat within 15 minutes after an intense workout (or 30-45 minutes after a walk or light jog).",
+            "A post-recovery snack should include a form of carbohydrate, some protein and plenty of fluid."
         ],
         [
             "Pre-Workout Fuel Suggestions",
@@ -376,11 +393,11 @@ fluidsData = [
     ],
     [
         "Fluids to Avoid",
-        "Decaf coffee -- 3 weeks",
-        "Caffeine -- 1 month",
-        "Alcohol (all types) -- 1 year",
-        "Carbonated drinks -- forever",
-        "Drinks with sugar (even juice) -- forever"
+        "Decaf coffee — 3 weeks",
+        "Caffeine — 1 month",
+        "Alcohol (all types) — 1 year",
+        "Carbonated drinks — forever",
+        "Drinks with sugar (even juice) — forever"
     ]
 ],
 
@@ -409,7 +426,7 @@ fruitData = [
 // external links -- 1st line is title
 linkData = [
     [
-        "GBMC Sites",
+        "GBMC Links",
         "GBMC - Bariatric Surgery & COMP", "https://www.gbmc.org/weightloss",
         "B4 Fitness & Lifestyle Coaching", "https://www.b4fitlife.com/",
         "Facebook - GBMC COMP", "https://www.facebook.com/GBMCWeightLoss",
@@ -418,7 +435,8 @@ linkData = [
         "Instagram - GBMC HealthCare", "https://www.instagram.com/gbmchealthcare/"
     ],
     [
-        "Recipe Sites",
+        "Recipe Links",
+        "GBMC COMP Bariatric-Friendly Recipes", "https://www.facebook.com/download/preview/2297739570253593",
         "Bariatric Foodie", "https://www.bariatricfoodie.com/",
         "BariatricEating.com", "https://www.bariatriceating.com/",
         "My Bariatric Life", "http://www.mybariatriclife.org/",
@@ -428,7 +446,7 @@ linkData = [
         "Pinterest - Bariatric Recipes", "https://www.pinterest.com/explore/bariatric-recipes/"
     ],
     [
-        "Sites to Buy Food",
+        "Food Shopping Links",
         "Netrition", "https://www.netrition.com/",
         "BariatricEating.com", "https://www.bariatriceating.com/",
         "Julian Bakery", "https://julianbakery.com/",
