@@ -2,18 +2,18 @@
 
 function onSubmitted(val) {
     // take input from inputBox
-    var descripList;
+    var descripList = "";
     for (var i = 0; i < terms.length; i++) {
         if (terms[i].term == val) {
             // if a match
-            inputBox.value = "";
-            descripList = "";
+            inputBox.value = "";  // clear input box
             for (var j = 0; j < terms[i].description.length; j++) {
                 // get strings in description & display them in list format
                 descripList = descripList + "<li>" + terms[i].description[j] + "</li>";
             }
             $("#termHeader").html(terms[i].icon + " " + terms[i].term);
             $("#descriptionList").html(descripList);
+            break;
         }
     }
 }
