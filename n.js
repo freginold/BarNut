@@ -35,7 +35,7 @@ function getData() {
         }
         // check for non-starches
         for (var j = 0; j < terms[c].description.length; j++) {
-            if (terms[c].description[j] == nonStarchTxt) {
+            if (terms[c].description[j] == nonStarchVegTxt) {
                 nonStarches.push(terms[c].term);
             }
         }
