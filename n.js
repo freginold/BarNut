@@ -161,4 +161,8 @@ $(document).ready(function() {
     getData();
     setAutocomplete();
     setTabs();
+    $('#submitBtn').click(function() {
+        onSubmitted(inputBox.value);
+        return false;   // prevents page reload
+    });
 });
